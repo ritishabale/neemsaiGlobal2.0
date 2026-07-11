@@ -23,10 +23,10 @@ export default function LogisticsFooterDivider() {
       <style jsx global>{`
         @keyframes driveTruck {
           0% {
-            transform: translate(-160px, 78px) scale(1.45);
+            transform: translate(-230px, 58.5px) scale(2.0);
           }
           100% {
-            transform: translate(1260px, 78px) scale(1.45);
+            transform: translate(1280px, 58.5px) scale(2.0);
           }
         }
         .animate-truck-1 {

@@ -4,6 +4,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import StickySidebar from "@/components/StickySidebar";
+import { Bodoni_Moda } from "next/font/google";
+
+const bodoniModa = Bodoni_Moda({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bodoni",
+});
 
 export const metadata: Metadata = {
   title: "NeemSai Global",
@@ -12,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`${bodoniModa.variable} h-full`}>
       <body className="min-h-full bg-[#f7f3ec] text-[#2c3f16]">
         <CustomCursor />
         <StickySidebar />
