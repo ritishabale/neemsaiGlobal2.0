@@ -115,7 +115,7 @@ export default function LogisticsFooterDivider() {
           <circle cx="100" cy="24" r="1.5" fill="#ffe066" />
         </g>
 
-        {/* NeemSai Global Logistics Cargo Truck 2 (Animated - Vibrant Teal Cab) */}
+        {/* NeemSai Global Logistics Cargo Truck 2 (Animated - Brand Green Cab) */}
         <g className="animate-truck-2">
           {/* Wheels with silver hubcaps */}
           <circle cx="18" cy="30" r="5.5" fill="#1c1c1e" />
@@ -131,8 +131,8 @@ export default function LogisticsFooterDivider() {
           <text x="8" y="17" fill="#2c3f16" fontSize="7.5" fontWeight="bold" fontFamily="serif" letterSpacing="0.2">NeemSai</text>
           <text x="46" y="17" fill="#a67c1c" fontSize="5.5" fontWeight="black" letterSpacing="0.5">GLOBAL</text>
           <path d="M71,9 C67,10 66,15 66,15 S71,14 71,9" fill="#2c3f16" />
-          {/* Cab in pop Teal color (#0d9488) */}
-          <path d="M80,8 L95,8 C98,8 101,11 101,15 L101,28 L80,28 Z" fill="#0d9488" />
+          {/* Cab in brand green color (#2c3f16) */}
+          <path d="M80,8 L95,8 C98,8 101,11 101,15 L101,28 L80,28 Z" fill="#2c3f16" />
           {/* Cab Window */}
           <path d="M85,11 L93,11 C95,11 96,12 96,14 L96,19 L85,19 Z" fill="#ffffff" opacity="0.85" />
           {/* Headlight */}

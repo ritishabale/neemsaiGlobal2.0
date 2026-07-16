@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --brand-green: #2c3f16;
   --font-serif: var(--font-bodoni), "Playfair Display", "Cormorant Garamond", Georgia, serif;
   --font-sans: Inter, "Segoe UI", sans-serif;
 }

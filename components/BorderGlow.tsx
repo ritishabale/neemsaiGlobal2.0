@@ -103,14 +103,14 @@ export default function BorderGlow({
   children,
   className = "",
   edgeSensitivity = 30,
-  glowColor = "120 40% 25%", // HSL for deep green forest glow
+  glowColor = "120 35% 19%", // HSL tuned to the site's brand green
   backgroundColor = "#ffffff",
   borderRadius = 16,
   glowRadius = 30,
   glowIntensity = 0.6,
   coneSpread = 20,
   animated = false,
-  colors = ["#2c3f16", "#2c3f16", "#a67c1c"], // NeemSai signature greens and gold colors
+  colors = ["#2c3f16", "#2c3f16", "#a67c1c"],
   fillOpacity = 0.25,
 }: BorderGlowProps) {
   const cardRef = useRef<HTMLDivElement>(null);
