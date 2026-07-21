@@ -75,10 +75,11 @@ export default function ContactPage() {
             <h3 className="font-semibold text-sm">Operational Hubs</h3>
             <ul className="mt-2 grid gap-1 text-sm text-[#48624a] sm:grid-cols-2">
               {[
+                "Mumbai",
                 "Pune",
+                "Nashik",
                 "Dubai",
-                "London",
-                "Singapore",
+                
               ].map((hub) => (
                 <li key={hub}>• {hub}</li>
               ))}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Badge from "@/components/Badge";
 
 export default function ProductCard({
@@ -70,6 +71,13 @@ export default function ProductCard({
             </p>
           </div>
         )}
+
+        <div className="pt-2">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#2c3f16]/15 bg-[#f3f8ef] px-4 py-2 text-sm font-semibold text-[#2c3f16] shadow-sm transition-all duration-300 group-hover:border-[#2c3f16]/25 group-hover:bg-[#e9f2e0] group-hover:shadow-md group-hover:-translate-y-0.5">
+            View details
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </span>
+        </div>
       </div>
     </Link>
   );

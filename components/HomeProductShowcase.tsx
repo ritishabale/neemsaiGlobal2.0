@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { products } from "@/data/products";
 import ProductCard from "./ProductCard";
 import ScrollReveal from "./ScrollReveal";
@@ -69,6 +70,16 @@ export default function HomeProductShowcase() {
             />
           </div>
         ))}
+      </div>
+
+      <div className="mt-10 flex justify-center">
+        <Link
+          href="/products"
+          className="inline-flex items-center gap-2 rounded-full border border-[#2c3f16]/15 bg-white px-6 py-3 text-sm font-semibold text-[#2c3f16] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2c3f16]/30 hover:shadow-md"
+        >
+          View more products
+          <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </div>
   );

@@ -9,6 +9,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import BorderGlow from "@/components/BorderGlow";
 import { MapPin, Ruler, Droplet, Award, AlertTriangle, Trash2, Palette, Package, Layers, ShieldCheck } from "lucide-react";
 
+const sharedTechnicalSpecs = [
+  { label: "HSN Code India-Specific", value: "10063020" },
+  { label: "Purity", value: "95% to 99% min" },
+];
+
 function getSpecIcon(label: string) {
   const l = label.toLowerCase();
   if (l.includes("source") || l.includes("state")) return <MapPin className="h-4 w-4 text-[#a67c1c]" />;
@@ -36,14 +41,20 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     notFound();
   }
 
-  // Separate into short and long specs
-  const longSpecs = product.technicalSpecs.filter(spec => 
-    spec.label.toLowerCase().includes("source") || spec.label.toLowerCase().includes("retail")
-  );
-  const shortSpecs = product.technicalSpecs.filter(spec => 
-    !spec.label.toLowerCase().includes("source") && !spec.label.toLowerCase().includes("retail")
-  );
-  const reorderedSpecs = [...shortSpecs, ...longSpecs];
+  const mergedSpecs = [...product.technicalSpecs];
+
+  for (const sharedSpec of sharedTechnicalSpecs) {
+    if (!mergedSpecs.some((spec) => spec.label.toLowerCase() === sharedSpec.label.toLowerCase())) {
+      const sourceIndex = mergedSpecs.findIndex((spec) => spec.label.toLowerCase().includes("source"));
+      const insertIndex = sourceIndex >= 0 ? sourceIndex + 1 : 0;
+      mergedSpecs.splice(insertIndex, 0, sharedSpec);
+    }
+  }
+
+  const reorderedSpecs = [
+    ...mergedSpecs.filter((spec) => !spec.label.toLowerCase().includes("source") && !spec.label.toLowerCase().includes("retail")),
+    ...mergedSpecs.filter((spec) => spec.label.toLowerCase().includes("source") || spec.label.toLowerCase().includes("retail")),
+  ];
 
   return (
     <div>
@@ -76,31 +87,33 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </div>
         <div className="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {reorderedSpecs.map((spec, i) => {
-            const isLong = longSpecs.some(ls => ls.label === spec.label);
             return (
               <ScrollReveal 
                 key={spec.label} 
                 direction="up" 
                 delay={i * 0.04}
-                className={isLong ? "lg:col-span-2 sm:col-span-2 col-span-1" : "col-span-1"}
+                className="col-span-1"
               >
                 <BorderGlow
-                  className="p-4 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-lg cursor-pointer group h-full"
-                  borderRadius={12}
-                  glowColor="40 80% 50%"
+                  className="min-h-[160px] p-4 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-lg cursor-pointer group h-full"
+                  backgroundColor="#1d2e11"
+                  borderRadius={18}
+                  glowColor="120 35% 19%"
+                  colors={['#1d2e11', '#244016', '#a67c1c']}
+                  fillOpacity={0.18}
                 >
                   <div className="flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 border border-[#2c3f16]/10 group-hover:bg-[#2c3f16]/10 group-hover:border-[#2c3f16]/20 transition-all duration-300">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/8 border border-white/10 group-hover:bg-white/12 group-hover:border-white/20 transition-all duration-300">
                       {getSpecIcon(spec.label)}
                     </div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#6b7f6d] font-semibold font-sans">{spec.label}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#cda110]/85 font-semibold font-sans">{spec.label}</span>
                   </div>
                   <div className="mt-3 flex-grow">
-                    <p className="font-serif-display text-base md:text-lg text-[#2c3f16] font-medium leading-snug group-hover:text-[#a67c1c] transition-colors duration-300">
+                    <p className="font-serif-display text-base md:text-lg text-[#f7f3ec] font-medium leading-snug group-hover:text-[#cda110] transition-colors duration-300">
                       {spec.value}
                     </p>
                   </div>
-                  <div className="mt-3 w-full h-[1px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#2c3f16]/40 group-hover:via-[#a67c1c] group-hover:to-transparent transition-all duration-500 rounded" />
+                  <div className="mt-3 w-full h-[1px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#f7f3ec]/30 group-hover:via-[#cda110] group-hover:to-transparent transition-all duration-500 rounded" />
                 </BorderGlow>
               </ScrollReveal>
             );
@@ -128,9 +141,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                     <h3 className="font-serif-display text-2xl text-[#2c3f16] group-hover:text-[#a67c1c] transition-colors duration-300">{variant.name}</h3>
                     <p className="text-[#48624a] text-sm leading-relaxed mt-2">{variant.description}</p>
                   </div>
-                  <button className="mt-4 rounded-full border border-[#2c3f16] bg-transparent px-4 py-2 text-sm font-semibold text-[#2c3f16] transition-all duration-300 hover:bg-[#2c3f16] hover:text-[#fcf5e5] hover:shadow-md align-self-start w-fit">
-                    Select Grade
-                  </button>
                 </div>
               </article>
             </ScrollReveal>

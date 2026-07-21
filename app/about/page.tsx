@@ -48,9 +48,9 @@ export default function AboutPage() {
     return {
       title: cert.title,
       node: (
-        <div className="w-[320px] rounded-2xl border border-[#e2dbc9]/70 bg-white px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <div className="w-[320px] rounded-2xl border border-[#b7c6ad] bg-[#f3f8ef] px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7f976f] hover:shadow-md">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#2c3f16]/10 bg-[#2c3f16]/5 text-[#2c3f16]">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#7f976f]/20 bg-[#2c3f16]/10 text-[#2c3f16]">
               <Icon className="h-6 w-6" />
             </div>
             <div className="min-w-0">
@@ -59,7 +59,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="mt-3 flex items-center justify-end">
-            <span className="inline-flex items-center rounded-full border border-[#2c3f16] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-colors duration-300 group-hover:bg-[#2c3f16] group-hover:text-[#fcf5e5]">
+            <span className="inline-flex items-center rounded-full border border-[#2c3f16] bg-[#edf4e8] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-colors duration-300 group-hover:bg-[#2c3f16] group-hover:text-[#fcf5e5]">
               View Document
             </span>
           </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={item.label}
-                className="rounded-2xl border border-[#e2dbc9]/70 bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up"
+                className="rounded-2xl border border-[#d8e0c9]/80 bg-gradient-to-br from-[#fbf7f0] via-[#f4efe3] to-[#eef5e8] p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up"
                 style={{ animationDelay: `${index * 120}ms` }}
               >
                 <span className="block text-[10px] uppercase tracking-[0.28em] text-[#48624a]/70 font-semibold">{item.label}</span>
@@ -418,13 +418,13 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="rounded-3xl border border-[#e2dbc9]/70 bg-white/80 p-4 md:p-6 shadow-[0_18px_60px_rgba(44,63,22,0.08)] backdrop-blur-sm">
-            <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#e2dbc9]/60 pb-4">
+          <div className="rounded-3xl border border-[#b7c6ad]/80 bg-[#f3f8ef]/95 p-4 md:p-6 shadow-[0_18px_60px_rgba(44,63,22,0.08)] backdrop-blur-sm">
+            <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#b7c6ad]/70 pb-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[#a67c1c] font-semibold">Verified documents</p>
                 <h3 className="mt-2 font-serif-display text-2xl text-[#2c3f16]">Credentials we keep current.</h3>
               </div>
-              <span className="hidden rounded-full border border-[#2c3f16]/20 bg-[#2c3f16]/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#2c3f16] md:inline-flex">
+              <span className="hidden rounded-full border border-[#2c3f16]/20 bg-[#dfead7] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#2c3f16] md:inline-flex">
                 Hover to explore
               </span>
             </div>
@@ -437,7 +437,7 @@ export default function AboutPage() {
                 gap={18}
                 hoverSpeed={22}
                 fadeOut
-                fadeOutColor="#faf8f5"
+                fadeOutColor="#f3f8ef"
                 scaleOnHover
                 ariaLabel="NeemSai Global certifications"
               />
@@ -450,11 +450,11 @@ export default function AboutPage() {
               return (
                 <div
                   key={cert.title}
-                  className="group rounded-2xl border border-[#e2dbc9]/70 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="group rounded-2xl border border-[#b7c6ad]/80 bg-[#f7fbf4] p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7f976f] hover:shadow-lg"
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#2c3f16]/10 bg-[#2c3f16]/5 text-[#2c3f16] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#7f976f]/20 bg-[#2c3f16]/10 text-[#2c3f16] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
                       <Icon className="h-7 w-7" />
                     </div>
                     <div className="min-w-0 flex-1">
@@ -463,7 +463,7 @@ export default function AboutPage() {
                     </div>
                     <Link
                       href="/contact"
-                      className="shrink-0 rounded-full border border-[#2c3f16] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-all duration-300 hover:bg-[#2c3f16] hover:text-[#fcf5e5]"
+                      className="shrink-0 rounded-full border border-[#2c3f16] bg-[#edf4e8] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-all duration-300 hover:bg-[#2c3f16] hover:text-[#fcf5e5]"
                     >
                       View Document
                     </Link>

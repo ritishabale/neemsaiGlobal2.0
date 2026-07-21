@@ -5,14 +5,13 @@ import LogisticsFooterDivider from "./LogisticsFooterDivider";
 
 const cols = {
   Company: ["About Us", "Sustainability", "Global Logistics"],
-  Products: ["Basmati Varieties", "Non-Basmati", "Recipes"],
+  Products: ["Basmati Varieties", "Non-Basmati"],
   Support: ["Contact", "Privacy Policy", "Terms"],
 };
 
 export default function Footer() {
   const getHref = (label: string) => {
     if (label === "Contact") return "/contact";
-    if (label === "Recipes") return "/recipes";
     if (label === "About Us") return "/about";
     if (label === "Basmati Varieties" || label === "Non-Basmati") return "/products";
     return "#";
