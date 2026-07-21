@@ -11,7 +11,7 @@ const slides = [
   {
     title: "Artisanal Heritage",
     subtitle: "Nurturing the finest grains across generations of expertise.",
-    image: "/images/grain.jpeg",
+    image: "/images/farm.jpeg",
   },
   {
     title: "Global Precision",
