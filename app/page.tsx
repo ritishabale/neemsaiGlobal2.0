@@ -24,7 +24,7 @@ export default function Home() {
       <section className="relative mx-auto max-w-7xl px-6 py-16 md:px-10 overflow-hidden">
         <NaturalParticles count={20} />
         <div className="relative z-10">
-          <SectionHeading title="The NeemSai Advantage" centered />
+          <SectionHeading title="The NeemSai Advantage" centered titleClassName="text-[#cda110]" />
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             <ScrollReveal direction="up" delay={0}>
               <FeatureCard
@@ -32,6 +32,7 @@ export default function Home() {
                 title="Artisanal Purity"
                 description="Every grain is nurtured using time-honored traditional methods, ensuring the preservation of natural aroma and nutrient profiles that industrial farming overlooks."
                 icon={<Wheat />}
+                accentColor="#b07a16"
               />
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
@@ -40,6 +41,7 @@ export default function Home() {
                 title="Global Precision"
                 description="Our world-class logistics network utilizes real-time tracking and climate-controlled storage to maintain field-fresh quality across all seven continents."
                 icon={<Ship />}
+                 accentColor="#b07a16"
               />
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.3}>
@@ -48,6 +50,7 @@ export default function Home() {
                 title="Harvest Legacy"
                 description="With over three decades of agrarian expertise, NeemSai Global bridges the gap between heritage soil and modern culinary requirements."
                 icon={<Leaf />}
+                 accentColor="#b07a16"
               />
             </ScrollReveal>
           </div>

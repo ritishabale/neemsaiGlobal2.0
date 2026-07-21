@@ -2,13 +2,72 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Plane, Package, ShieldCheck, Leaf, Handshake, Droplets } from "lucide-react";
+import { CheckCircle2, Plane, Package, ShieldCheck, Leaf, Handshake, Droplets, Globe, FileText, BadgeCheck, ScrollText, Stamp, IdCard, Award } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
 import ScrollFloat from "@/components/ScrollFloat";
 import ExportMap from "@/components/ExportMap";
+import LogoLoop from "@/components/LogoLoop";
 
 export default function AboutPage() {
+  const certifications = [
+    {
+      title: "Udyam (MSME) Registration Certificate",
+      subtitle: "Micro, Small and Medium Enterprises registration",
+      icon: Stamp,
+    },
+    {
+      title: "GST Registration Certificate (Form GST REG-06)",
+      subtitle: "Goods and Services Tax compliance",
+      icon: BadgeCheck,
+    },
+    {
+      title: "Bank Authorization Letter",
+      subtitle: "Authorized banking and trade operations",
+      icon: FileText,
+    },
+    {
+      title: "Exporter Code (IEC) Certificate",
+      subtitle: "Importer-Exporter Code registration",
+      icon: ScrollText,
+    },
+    {
+      title: "APEDA Registration-cum-Membership Certificate (RCMC)",
+      subtitle: "Agricultural and Processed Food Products Export Development Authority",
+      icon: Award,
+    },
+    {
+      title: "FSSAI License",
+      subtitle: "Food Safety and Standards Authority of India",
+      icon: IdCard,
+    },
+  ];
+
+  const certificationLoopItems = certifications.map((cert) => {
+    const Icon = cert.icon;
+    return {
+      title: cert.title,
+      node: (
+        <div className="w-[320px] rounded-2xl border border-[#e2dbc9]/70 bg-white px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#2c3f16]/10 bg-[#2c3f16]/5 text-[#2c3f16]">
+              <Icon className="h-6 w-6" />
+            </div>
+            <div className="min-w-0">
+              <h3 className="truncate font-serif-display text-base text-[#2c3f16]">{cert.title}</h3>
+              <p className="mt-1 line-clamp-1 text-xs text-[#48624a] font-light">{cert.subtitle}</p>
+            </div>
+          </div>
+          <div className="mt-3 flex items-center justify-end">
+            <span className="inline-flex items-center rounded-full border border-[#2c3f16] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-colors duration-300 group-hover:bg-[#2c3f16] group-hover:text-[#fcf5e5]">
+              View Document
+            </span>
+          </div>
+        </div>
+      ),
+    };
+  });
+
   return (
     <div className="overflow-x-hidden font-sans">
       {/* Hero Section */}
@@ -81,6 +140,105 @@ export default function AboutPage() {
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Vision and Mission Section */}
+      <section className="py-20 bg-[#f7f3ec] relative overflow-hidden border-y border-[#e2dbc9]/40">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-24 right-0 h-64 w-64 rounded-full bg-[#a67c1c]/10 blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#2c3f16]/10 blur-3xl" />
+          <div className="absolute left-1/2 top-10 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#2c3f16]/15 to-transparent" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <SectionHeading
+              title="Our Vision & Mission"
+              subtitle="A clear purpose guides every harvest, every shipment, and every partnership we build."
+              centered
+              titleClassName="text-[#2c3f16]"
+            />
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="group relative rounded-3xl border border-[#e2dbc9]/70 bg-white/80 p-8 shadow-[0_18px_60px_rgba(44,63,22,0.08)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 hover:rotate-[-0.5deg] hover:shadow-[0_26px_80px_rgba(44,63,22,0.14)] animate-fade-in-up will-change-transform">
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#2c3f16]/5 via-transparent to-transparent pointer-events-none" />
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2c3f16]/10 text-[#2c3f16] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-[#2c3f16]/15">
+                <Globe className="h-7 w-7 transition-transform duration-500 group-hover:scale-110" />
+              </div>
+              <span className="text-xs uppercase tracking-[0.3em] text-[#a67c1c] font-semibold transition-all duration-300 group-hover:tracking-[0.38em]">Our Vision</span>
+              <h3 className="mt-3 font-serif-display text-3xl text-[#2c3f16] transition-transform duration-500 group-hover:translate-x-1">To be the most trusted name in premium rice exports worldwide.</h3>
+              <p className="mt-4 text-sm md:text-base leading-relaxed font-light text-[#48624a] transition-colors duration-300 group-hover:text-[#2f4632]">
+                We envision a future where NeemSai Global is recognized for uncompromising quality, responsible sourcing, and a lasting connection between India’s farmlands and kitchens across the world.
+              </p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-[#e2dbc9]/70 bg-[#faf8f5] p-4 transition-all duration-300 hover:-translate-y-2 hover:-rotate-1 hover:border-[#2c3f16]/20 hover:shadow-md group/stat">
+                  <span className="block text-[10px] uppercase tracking-[0.28em] text-[#48624a]/70 font-semibold">Reach</span>
+                  <span className="mt-2 block font-serif-display text-2xl text-[#2c3f16] transition-transform duration-300 group-hover/stat:translate-x-1">30+ Countries</span>
+                  <span className="text-sm text-[#48624a] font-light transition-colors duration-300 group-hover/stat:text-[#2c3f16]">Expanding trusted export routes globally.</span>
+                </div>
+                <div className="rounded-2xl border border-[#e2dbc9]/70 bg-[#faf8f5] p-4 transition-all duration-300 hover:-translate-y-2 hover:rotate-1 hover:border-[#2c3f16]/20 hover:shadow-md group/stat">
+                  <span className="block text-[10px] uppercase tracking-[0.28em] text-[#48624a]/70 font-semibold">Heritage</span>
+                  <span className="mt-2 block font-serif-display text-2xl text-[#2c3f16] transition-transform duration-300 group-hover/stat:translate-x-1">40+ Years</span>
+                  <span className="text-sm text-[#48624a] font-light transition-colors duration-300 group-hover/stat:text-[#2c3f16]">A legacy built on family expertise.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative rounded-3xl border border-[#e2dbc9]/70 bg-[#2c3f16] p-8 shadow-[0_18px_60px_rgba(44,63,22,0.18)] transition-all duration-500 hover:-translate-y-3 hover:rotate-[0.5deg] hover:shadow-[0_26px_80px_rgba(44,63,22,0.22)] overflow-hidden animate-fade-in-up-delay-2 will-change-transform">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(166,124,28,0.18),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]" />
+              <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-white/5 blur-2xl animate-pulse transition-opacity duration-300 group-hover:opacity-80" />
+              <div className="relative z-10">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-[#fcf5e5] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 group-hover:bg-white/15">
+                  <CheckCircle2 className="h-7 w-7 transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <span className="text-xs uppercase tracking-[0.3em] text-[#d7b96a] font-semibold transition-all duration-300 group-hover:tracking-[0.38em]">Our Mission</span>
+                <h3 className="mt-3 font-serif-display text-3xl text-[#fcf5e5] transition-transform duration-500 group-hover:translate-x-1">To deliver exceptional grains with integrity, consistency, and care.</h3>
+                <p className="mt-4 text-sm md:text-base leading-relaxed font-light text-[#c8d5c2] transition-colors duration-300 group-hover:text-[#edf4e8]">
+                  We work to support farmers, protect grain quality at every stage, and create dependable export experiences that strengthen long-term relationships with our customers.
+                </p>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-2 hover:-rotate-1 hover:bg-white/10 group/stat">
+                    <span className="block text-[10px] uppercase tracking-[0.28em] text-[#d7b96a] font-semibold">Quality</span>
+                    <span className="mt-2 block font-serif-display text-2xl text-[#fcf5e5] transition-transform duration-300 group-hover/stat:translate-x-1">12 Steps</span>
+                    <span className="text-sm text-[#c8d5c2] font-light transition-colors duration-300 group-hover/stat:text-[#edf4e8]">Multi-stage inspection for every lot.</span>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-2 hover:bg-white/10 group/stat">
+                    <span className="block text-[10px] uppercase tracking-[0.28em] text-[#d7b96a] font-semibold">Support</span>
+                    <span className="mt-2 block font-serif-display text-2xl text-[#fcf5e5] transition-transform duration-300 group-hover/stat:translate-x-1">500+ Farmers</span>
+                    <span className="text-sm text-[#c8d5c2] font-light transition-colors duration-300 group-hover/stat:text-[#edf4e8]">Partnerships that strengthen rural livelihoods.</span>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-2 hover:rotate-1 hover:bg-white/10 group/stat">
+                    <span className="block text-[10px] uppercase tracking-[0.28em] text-[#d7b96a] font-semibold">Traceability</span>
+                    <span className="mt-2 block font-serif-display text-2xl text-[#fcf5e5] transition-transform duration-300 group-hover/stat:translate-x-1">100%</span>
+                    <span className="text-sm text-[#c8d5c2] font-light transition-colors duration-300 group-hover/stat:text-[#edf4e8]">Transparent handling from farm to port.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-4">
+            {[
+              { label: "Premium Varieties", value: "15+", copy: "Carefully selected grain profiles for varied markets." },
+              { label: "Countries Served", value: "30+", copy: "A growing distribution footprint across continents." },
+              { label: "Farm Partners", value: "500+", copy: "Long-term relationships with independent growers." },
+              { label: "Quality Checks", value: "12", copy: "A disciplined process that protects every shipment." },
+            ].map((item, index) => (
+              <div
+                key={item.label}
+                className="rounded-2xl border border-[#e2dbc9]/70 bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up"
+                style={{ animationDelay: `${index * 120}ms` }}
+              >
+                <span className="block text-[10px] uppercase tracking-[0.28em] text-[#48624a]/70 font-semibold">{item.label}</span>
+                <span className="mt-3 block font-serif-display text-3xl text-[#2c3f16]">{item.value}</span>
+                <p className="mt-2 text-sm leading-relaxed font-light text-[#48624a]">{item.copy}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -244,6 +402,75 @@ export default function AboutPage() {
                 Contact Sales Team
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-20 bg-[#faf8f5] border-t border-[#e2dbc9]/40 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <SectionHeading
+              title="Certifications & Registrations"
+              subtitle="Official business and export credentials that support our operations and compliance standards."
+              centered
+              titleClassName="text-[#2c3f16]"
+            />
+          </div>
+
+          <div className="rounded-3xl border border-[#e2dbc9]/70 bg-white/80 p-4 md:p-6 shadow-[0_18px_60px_rgba(44,63,22,0.08)] backdrop-blur-sm">
+            <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#e2dbc9]/60 pb-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-[#a67c1c] font-semibold">Verified documents</p>
+                <h3 className="mt-2 font-serif-display text-2xl text-[#2c3f16]">Credentials we keep current.</h3>
+              </div>
+              <span className="hidden rounded-full border border-[#2c3f16]/20 bg-[#2c3f16]/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#2c3f16] md:inline-flex">
+                Hover to explore
+              </span>
+            </div>
+
+            <div className="h-[130px] md:h-[150px]">
+              <LogoLoop
+                logos={certificationLoopItems}
+                speed={70}
+                direction="left"
+                gap={18}
+                hoverSpeed={22}
+                fadeOut
+                fadeOutColor="#faf8f5"
+                scaleOnHover
+                ariaLabel="NeemSai Global certifications"
+              />
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {certifications.map((cert, index) => {
+              const Icon = cert.icon;
+              return (
+                <div
+                  key={cert.title}
+                  className="group rounded-2xl border border-[#e2dbc9]/70 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  style={{ animationDelay: `${index * 90}ms` }}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#2c3f16]/10 bg-[#2c3f16]/5 text-[#2c3f16] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
+                      <Icon className="h-7 w-7" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="truncate font-serif-display text-lg text-[#2c3f16]">{cert.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed font-light text-[#48624a]">{cert.subtitle}</p>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="shrink-0 rounded-full border border-[#2c3f16] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-all duration-300 hover:bg-[#2c3f16] hover:text-[#fcf5e5]"
+                    >
+                      View Document
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

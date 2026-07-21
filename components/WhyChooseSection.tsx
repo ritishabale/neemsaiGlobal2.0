@@ -64,13 +64,11 @@ export default function WhyChooseSection() {
       {/* Parallax Background Image */}
       <div
         ref={bgRef}
-        className="absolute inset-0 w-full h-[124%] -top-[12%] bg-cover bg-center opacity-30 pointer-events-none scale-105"
+        className="absolute inset-0 w-full h-[124%] -top-[12%] bg-cover bg-center opacity-100 pointer-events-none scale-105"
         style={{
           backgroundImage: "url('/images/why-choose-bg.jpg')",
         }}
       />
-      {/* Subtle dark overlay for text legibility */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl text-center mb-16">
         <ScrollFloat
@@ -80,7 +78,7 @@ export default function WhyChooseSection() {
           scrollEnd="bottom center"
           stagger={0.015}
           containerClassName="my-0 text-center mx-auto"
-          textClassName="font-serif-display text-4xl md:text-5xl text-[#f7f3ec] font-bold"
+          textClassName="font-serif-display text-4xl md:text-5xl text-[#172e13] font-bold"
         >
           Why Choose NeemSai Global?
         </ScrollFloat>

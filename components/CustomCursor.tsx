@@ -58,26 +58,9 @@ export default function CustomCursor() {
   }, []);
 
   useEffect(() => {
-    const isTouchDevice = typeof window !== "undefined" && window.matchMedia("(hover: none)").matches;
-    if (isTouchDevice || hidden) return;
+    if (hidden) return;
 
-    let animFrame: number;
-    
-    const updateTrail = () => {
-      setTrail((prev) => {
-        const dx = position.x - prev.x;
-        const dy = position.y - prev.y;
-        return {
-          x: prev.x + dx * 0.15,
-          y: prev.y + dy * 0.15,
-        };
-      });
-      animFrame = requestAnimationFrame(updateTrail);
-    };
-
-    animFrame = requestAnimationFrame(updateTrail);
-
-    return () => cancelAnimationFrame(animFrame);
+    setTrail(position);
   }, [position, hidden]);
 
   const isTouchDevice = typeof window !== "undefined" && window.matchMedia("(hover: none)").matches;
@@ -87,7 +70,7 @@ export default function CustomCursor() {
     <>
       {/* Outer Ring */}
       <div
-        className="pointer-events-none fixed top-0 left-0 z-[9999] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 transition-[width,height,background-color,border-color] duration-300 ease-out will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-[9999] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 transition-[width,height,background-color,border-color,transform] duration-300 ease-out will-change-transform"
         style={{
           transform: `translate3d(${trail.x}px, ${trail.y}px, 0) ${
             linkHovered ? "scale(1.5)" : clicked ? "scale(0.85)" : "scale(1)"

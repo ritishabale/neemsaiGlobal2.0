@@ -21,19 +21,19 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#d7d0c0] bg-[#f7f3ec]/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1 md:px-10 md:py-3">
         
         {/* Left: Logo */}
         <div className="flex flex-1 justify-start">
-          <Link href="/" className="flex items-center gap-3 font-serif-display text-2xl text-[#2c3f16]">
+          <Link href="/" className="flex items-center gap-2 font-serif-display text-2xl text-[#2c3f16]">
             <Image
               src="/images/logo.png"
               alt="NeemSai Global Logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 object-contain transition-all duration-300 hover:scale-105"
+              width={96}
+              height={96}
+              className="h-24 w-24 object-contain transition-all duration-300 hover:scale-105"
             />
-            <span className="font-serif-display text-2xl font-bold tracking-tight text-[#2c3f16] max-sm:hidden">
+            <span className="font-serif-display text-lg font-bold tracking-tight text-[#2c3f16] max-sm:hidden">
               NeemSai Global
             </span>
           </Link>
@@ -47,7 +47,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-serif-display text-base font-medium transition hover:text-[#2c3f16] ${
+                className={`font-serif-display text-lg font-medium transition hover:text-[#2c3f16] ${
                   active ? "border-b-2 border-[#2c3f16] pb-1 text-[#2c3f16]" : "text-[#2c3f16]"
                 }`}
               >
