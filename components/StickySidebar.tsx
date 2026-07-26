@@ -5,7 +5,7 @@ import { Mail, Phone, Send } from "lucide-react";
 
 export default function StickySidebar() {
   return (
-    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-6 bg-[#1f2421]/95 text-[#fcf5e5] py-6 px-3 rounded-full shadow-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_25px_rgba(45, 72, 31,0.25)]">
+    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-6 bg-[#2c3f16]/95 text-[#fcf5e5] py-6 px-3 rounded-full shadow-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_25px_rgba(44,63,22,0.3)]">
       {/* WhatsApp Link */}
       <Link
         href="https://wa.me/919833613591"
@@ -21,8 +21,10 @@ export default function StickySidebar() {
 
       {/* Mail Link */}
       <Link
-        href="mailto:neemsaiglobal@gmail.com"
-        aria-label="Email NeemSai Global"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=neemsaiglobal@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Email NeemSai Global via Gmail"
         className="text-[#cec7b7] hover:text-[#fcf5e5] hover:scale-125 transition-transform duration-300 cursor-pointer"
       >
         <Mail className="h-6 w-6 stroke-[2]" />

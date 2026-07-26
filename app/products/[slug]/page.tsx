@@ -7,6 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { products } from "@/data/products";
 import TechnicalSpecs from "@/components/TechnicalSpecs";
 import ScrollReveal from "@/components/ScrollReveal";
+import { Download } from "lucide-react";
 
 const sharedTechnicalSpecs = [
   { label: "HSN Code India-Specific", value: "10063020" },
@@ -56,9 +57,19 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               <Badge key={badge}>{badge}</Badge>
             ))}
           </div>
-          <a href="#quote" className="mt-6 inline-flex rounded-full bg-[#2c3f16] px-6 py-3 font-semibold text-[#fcf5e5]">
-            Request Quotation
-          </a>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="#quote" className="inline-flex rounded-full bg-[#2c3f16] px-6 py-3 font-semibold text-[#fcf5e5] hover:bg-[#233212] transition-colors duration-300">
+              Request Quotation
+            </a>
+            <Link
+              href={`/products/${product.slug}/spec-sheet`}
+              target="_blank"
+              className="inline-flex items-center gap-2 rounded-full border border-[#2c3f16] px-6 py-3 font-semibold text-[#2c3f16] hover:bg-[#2c3f16]/5 transition-colors duration-300"
+            >
+              <Download className="h-4 w-4" />
+              Download Spec Sheet
+            </Link>
+          </div>
         </div>
         <div className="relative min-h-72 overflow-hidden rounded-2xl">
           <Image src={product.heroImage} alt={product.name} fill className="object-cover" />

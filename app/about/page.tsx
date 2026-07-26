@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Plane, Package, ShieldCheck, Leaf, Handshake, Droplets, Globe, Stamp, BadgeCheck, FileText, ScrollText, Award, IdCard } from "lucide-react";
+import { CheckCircle2, Plane, Package, ShieldCheck, Leaf, Handshake, Droplets, Globe, Stamp, BadgeCheck, FileText, ScrollText, Award, IdCard, Factory, Warehouse, FlaskConical, Check } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
 import ScrollFloat from "@/components/ScrollFloat";
@@ -300,6 +300,202 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Comprehensive Export Infrastructure Section */}
+      <section className="py-20 bg-[#faf8f5] border-y border-[#e2dbc9]/40 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none opacity-40">
+          <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#2c3f16]/5 rounded-full blur-3xl -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#a67c1c]/5 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#a67c1c] font-semibold block mb-3">FACILITIES & LOGISTICS</span>
+            <SectionHeading
+              title="Comprehensive Export Infrastructure"
+              subtitle="End-to-end capabilities under one roof, ensuring absolute quality control from harvest to dispatch."
+              centered
+              titleClassName="text-[#2c3f16]"
+            />
+            <div className="mt-4 w-24 h-[2px] bg-[#a67c1c] mx-auto"></div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-6 min-h-[440px] items-stretch">
+            {/* Panel 1: Processing Facility */}
+            <ScrollReveal direction="up" delay={0.1} className="flex-1 lg:hover:flex-[1.3] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <div className="group relative h-full rounded-3xl border border-[#b7c6ad]/40 bg-white/70 p-8 shadow-[0_12px_30px_rgba(44,63,22,0.03)] hover:bg-[#2c3f16] hover:border-transparent hover:shadow-[0_25px_60px_rgba(44,63,22,0.25)] flex flex-col justify-between overflow-hidden cursor-pointer transition-all duration-500 ease-out">
+                {/* Gold light reflection border inside */}
+                <div className="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#a67c1c]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2c3f16]/5 text-[#2c3f16] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#fcf5e5] group-hover:text-[#2c3f16] group-hover:rotate-3 shadow-sm">
+                      <Factory className="h-7 w-7" />
+                    </div>
+                    <span className="font-serif-display text-4xl text-[#a67c1c]/10 font-semibold tracking-wider transition-colors duration-500 group-hover:text-white/10">01</span>
+                  </div>
+
+                  <h3 className="mt-8 font-serif-display text-2xl text-[#2c3f16] font-semibold tracking-wide transition-colors duration-500 group-hover:text-[#fcf5e5]">
+                    Processing Facility
+                  </h3>
+                  
+                  <div className="mt-2 w-12 h-[1.5px] bg-[#a67c1c]/40 transition-all duration-500 group-hover:w-20 group-hover:bg-[#a67c1c]" />
+
+                  <ul className="mt-6 space-y-4">
+                    {[
+                      "Modern and hygienically maintained processing facility",
+                      "Cleaning, grading and destoning systems",
+                      "Advanced optical colour sorting technology",
+                      "Automatic and semi-automatic packaging machines",
+                      "Accurate weighing, filling and vacuum/bulk packing options"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm text-[#48624a] leading-relaxed font-light transition-colors duration-500 group-hover:text-[#edf4e8]/90">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 text-[#2c3f16] mt-0.5 group-hover:bg-white/15 group-hover:text-[#fcf5e5] group-hover:scale-110 transition-all duration-500">
+                          <Check className="h-3 w-3" />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Panel 2: Warehousing */}
+            <ScrollReveal direction="up" delay={0.2} className="flex-1 lg:hover:flex-[1.3] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <div className="group relative h-full rounded-3xl border border-[#b7c6ad]/40 bg-white/70 p-8 shadow-[0_12px_30px_rgba(44,63,22,0.03)] hover:bg-[#2c3f16] hover:border-transparent hover:shadow-[0_25px_60px_rgba(44,63,22,0.25)] flex flex-col justify-between overflow-hidden cursor-pointer transition-all duration-500 ease-out">
+                {/* Gold light reflection border inside */}
+                <div className="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#a67c1c]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2c3f16]/5 text-[#2c3f16] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#fcf5e5] group-hover:text-[#2c3f16] group-hover:rotate-3 shadow-sm">
+                      <Warehouse className="h-7 w-7" />
+                    </div>
+                    <span className="font-serif-display text-4xl text-[#a67c1c]/10 font-semibold tracking-wider transition-colors duration-500 group-hover:text-white/10">02</span>
+                  </div>
+
+                  <h3 className="mt-8 font-serif-display text-2xl text-[#2c3f16] font-semibold tracking-wide transition-colors duration-500 group-hover:text-[#fcf5e5]">
+                    Warehousing
+                  </h3>
+
+                  <div className="mt-2 w-12 h-[1.5px] bg-[#a67c1c]/40 transition-all duration-500 group-hover:w-20 group-hover:bg-[#a67c1c]" />
+
+                  <ul className="mt-6 space-y-4">
+                    {[
+                      "Spacious, clean and well-ventilated storage areas",
+                      "Moisture-controlled storage where required",
+                      "FIFO (First In, First Out) inventory management"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm text-[#48624a] leading-relaxed font-light transition-colors duration-500 group-hover:text-[#edf4e8]/90">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 text-[#2c3f16] mt-0.5 group-hover:bg-white/15 group-hover:text-[#fcf5e5] group-hover:scale-110 transition-all duration-500">
+                          <Check className="h-3 w-3" />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Panel 3: Laboratory */}
+            <ScrollReveal direction="up" delay={0.3} className="flex-1 lg:hover:flex-[1.3] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+              <div className="group relative h-full rounded-3xl border border-[#b7c6ad]/40 bg-white/70 p-8 shadow-[0_12px_30px_rgba(44,63,22,0.03)] hover:bg-[#2c3f16] hover:border-transparent hover:shadow-[0_25px_60px_rgba(44,63,22,0.25)] flex flex-col justify-between overflow-hidden cursor-pointer transition-all duration-500 ease-out">
+                {/* Gold light reflection border inside */}
+                <div className="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#a67c1c]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2c3f16]/5 text-[#2c3f16] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#fcf5e5] group-hover:text-[#2c3f16] group-hover:rotate-3 shadow-sm">
+                      <FlaskConical className="h-7 w-7" />
+                    </div>
+                    <span className="font-serif-display text-4xl text-[#a67c1c]/10 font-semibold tracking-wider transition-colors duration-500 group-hover:text-white/10">03</span>
+                  </div>
+
+                  <h3 className="mt-8 font-serif-display text-2xl text-[#2c3f16] font-semibold tracking-wide transition-colors duration-500 group-hover:text-[#fcf5e5]">
+                    Laboratory
+                  </h3>
+
+                  <div className="mt-2 w-12 h-[1.5px] bg-[#a67c1c]/40 transition-all duration-500 group-hover:w-20 group-hover:bg-[#a67c1c]" />
+
+                  <ul className="mt-6 space-y-4">
+                    {[
+                      "In-house quality testing for moisture, purity and foreign matter",
+                      "Batch-wise quality verification",
+                      "Compliance with international quality standards"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm text-[#48624a] leading-relaxed font-light transition-colors duration-500 group-hover:text-[#edf4e8]/90">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 text-[#2c3f16] mt-0.5 group-hover:bg-white/15 group-hover:text-[#fcf5e5] group-hover:scale-110 transition-all duration-500">
+                          <Check className="h-3 w-3" />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Infrastructure Spotlight Section */}
+      <section className="py-20 bg-white border-b border-[#e2dbc9]/40 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 items-center relative z-10">
+          
+          {/* Text content side */}
+          <ScrollReveal direction="left" delay={0.1} className="space-y-6">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#a67c1c] font-semibold block">
+              MODERN FACILITIES
+            </span>
+            <h2 className="font-serif-display text-4xl text-[#2c3f16] leading-tight font-bold">
+              State-of-the-Art Processing Unit
+            </h2>
+            <div className="h-[1.5px] w-20 bg-[#a67c1c]/60" />
+            
+            <p className="text-[#48624a] text-sm md:text-base leading-relaxed font-light">
+              At NeemSai Global, we believe that the journey from paddy to plate requires absolute technical precision. Our processing hubs are equipped with advanced milling, sortex-cleaning, and multi-stage grading machines, ensuring that every grain of rice meets stringent international food safety standards.
+            </p>
+            <p className="text-[#48624a] text-sm md:text-base leading-relaxed font-light">
+              Designed to handle high-capacity export demands, our infrastructure is engineered to preserve grain integrity and hygiene at scale. From automated temperature-regulated storage systems to computer-controlled color sorters, we invest in processing excellence at every step.
+            </p>
+            
+            <div className="pt-4 flex flex-wrap gap-6">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2c3f16]/5 text-[#2c3f16]">
+                  <Check className="h-5 w-5" />
+                </span>
+                <span className="text-sm font-semibold text-[#2c3f16]">Sortex Cleaned Grains</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2c3f16]/5 text-[#2c3f16]">
+                  <Check className="h-5 w-5" />
+                </span>
+                <span className="text-sm font-semibold text-[#2c3f16]">HACCP & ISO Compliant</span>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Image side */}
+          <ScrollReveal direction="right" delay={0.2}>
+            <div className="relative group">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-[#b7c6ad]/30 shadow-2xl relative z-10 bg-[#f7f3ec]">
+                <Image
+                  src="/images/about-sourcing-3.png"
+                  alt="State of the art automated grain processing and sorting machines at NeemSai Global"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              {/* Decorative background glow behind image */}
+              <div className="absolute -bottom-6 -right-6 w-72 h-72 bg-[#a67c1c]/5 rounded-full blur-3xl -z-0 transition-all duration-500 group-hover:bg-[#a67c1c]/10" />
+            </div>
+          </ScrollReveal>
+
+        </div>
+      </section>
+
       {/* Sustainable Sourcing Section */}
       <section className="py-20 bg-[#2c3f16] text-[#f7f3ec] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -378,6 +574,138 @@ export default function AboutPage() {
               </ScrollReveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Packing Options Section */}
+      <section className="py-20 bg-[#fdfcfb] border-t border-[#e2dbc9]/40 relative overflow-hidden">
+        {/* Style block for animations */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          @keyframes float-bag-1 {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+          }
+          @keyframes float-bag-2 {
+            0%, 100% { transform: translateY(0) rotate(3deg); }
+            50% { transform: translateY(-8px) rotate(-1deg); }
+          }
+          .animate-float-1 {
+            animation: float-bag-1 5s ease-in-out infinite;
+          }
+          .animate-float-2 {
+            animation: float-bag-2 6s ease-in-out infinite;
+          }
+        `}} />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-16 items-center relative z-10">
+          
+          {/* Left Column: Text Details */}
+          <ScrollReveal direction="left" delay={0.1} className="space-y-6">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#a67c1c] font-semibold block">
+              CUSTOM SOLUTIONS
+            </span>
+            <h2 className="font-serif-display text-4xl text-[#2c3f16] leading-tight font-bold">
+              Packing Options
+            </h2>
+            <div className="h-[1.5px] w-20 bg-[#a67c1c]/60" />
+            
+            <p className="text-[#48624a] text-sm md:text-base leading-relaxed font-light">
+              We offer a wide variety of export-grade packaging options to ensure our products reach you in perfect condition, maintaining their freshness, premium aroma, and grain quality during transit.
+            </p>
+            
+            <ul className="space-y-4 pt-2">
+              <li className="flex items-start gap-4">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 text-[#2c3f16] mt-1">
+                  <Check className="h-4 w-4" />
+                </span>
+                <div>
+                  <strong className="text-sm text-[#2c3f16] font-semibold">Sizes:</strong>
+                  <span className="block text-sm text-[#48624a] font-light mt-0.5">
+                    1kg, 2kg, 5kg, 10kg, 20kg (Retail Packets) & 25kg, 50kg, and Bulk / Container Loads.
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 text-[#2c3f16] mt-1">
+                  <Check className="h-4 w-4" />
+                </span>
+                <div>
+                  <strong className="text-sm text-[#2c3f16] font-semibold">Materials:</strong>
+                  <span className="block text-sm text-[#48624a] font-light mt-0.5">
+                    Premium BOPP Bags, Heavy-Duty PP Bags, Eco-Friendly Woven / Non-Woven Bags, and Traditional Jute Bags.
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#2c3f16]/5 text-[#2c3f16] mt-1">
+                  <Check className="h-4 w-4" />
+                </span>
+                <div>
+                  <strong className="text-sm text-[#2c3f16] font-semibold">Customization:</strong>
+                  <span className="block text-sm text-[#48624a] font-light mt-0.5">
+                    Private Label Packaging and Custom Branding options tailored to your market specifications.
+                  </span>
+                </div>
+              </li>
+            </ul>
+
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="inline-flex rounded-full bg-[#2c3f16] px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#fcf5e5] hover:bg-[#233212] hover:shadow-lg transition duration-300 shadow-md"
+              >
+                Discuss Your Requirements
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          {/* Right Column: Dynamic Visual Showcase */}
+          <ScrollReveal direction="right" delay={0.2} className="relative">
+            <div className="relative mx-auto max-w-[480px]">
+              {/* Main Cargo Image */}
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-[#b7c6ad]/30 shadow-2xl relative bg-[#f7f3ec] z-10">
+                <Image
+                  src="/images/Cargo.jpeg"
+                  alt="Export logistics and container loading at NeemSai Global"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Floating BOPP Bag Badge */}
+              <div className="absolute -left-10 -bottom-8 bg-white/95 border border-[#b7c6ad]/40 rounded-2xl p-3 shadow-xl z-20 flex items-center gap-3 w-48 animate-float-1 backdrop-blur-sm">
+                <div className="relative h-12 w-12 shrink-0 bg-[#f7f3ec] rounded-lg overflow-hidden border border-[#b7c6ad]/20">
+                  <Image
+                    src="/images/bopp.png"
+                    alt="BOPP Packaging Bag"
+                    fill
+                    className="object-contain p-1"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[10px] text-[#a67c1c] uppercase tracking-wider font-semibold">Premium</span>
+                  <p className="text-xs text-[#2c3f16] font-semibold truncate leading-tight mt-0.5">BOPP Laminated</p>
+                </div>
+              </div>
+
+              {/* Floating Bulk PP Bag Badge */}
+              <div className="absolute -right-8 -top-8 bg-white/95 border border-[#b7c6ad]/40 rounded-2xl p-3 shadow-xl z-20 flex items-center gap-3 w-48 animate-float-2 backdrop-blur-sm">
+                <div className="relative h-12 w-12 shrink-0 bg-[#f7f3ec] rounded-lg overflow-hidden border border-[#b7c6ad]/20">
+                  <Image
+                    src="/images/bulk-pp.png"
+                    alt="Bulk PP Woven Bag"
+                    fill
+                    className="object-contain p-1"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <span className="text-[10px] text-[#a67c1c] uppercase tracking-wider font-semibold">Bulk Export</span>
+                  <p className="text-xs text-[#2c3f16] font-semibold truncate leading-tight mt-0.5">PP Woven Sacks</p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
         </div>
       </section>
 
