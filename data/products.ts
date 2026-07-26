@@ -41,7 +41,7 @@ export const products: Product[] = [
     tagline: "Renowned globally for its extraordinary grain length and distinct fragrance.",
     description: "NeemSai Global delivers carefully milled 1121 Basmati Rice with traceable sourcing from the Himalayan foothills, strict lab controls, and reliable international shipping.",
     shortDescription: "Renowned globally for its extraordinary grain length and distinct fragrance.",
-    heroImage: "/images/1121.jpeg",
+    heroImage: "/images/1121.png",
     badges: ["POPULAR", "Aromatic Profile"],
     grainLength: "8.35mm - 8.40mm pre cooked",
     variants: ["White Sella", "Golden Sella", "Steam"],
