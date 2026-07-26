@@ -5,28 +5,13 @@ import Badge from "@/components/Badge";
 import InquiryForm from "@/components/InquiryForm";
 import SectionHeading from "@/components/SectionHeading";
 import { products } from "@/data/products";
+import TechnicalSpecs from "@/components/TechnicalSpecs";
 import ScrollReveal from "@/components/ScrollReveal";
-import BorderGlow from "@/components/BorderGlow";
-import { MapPin, Ruler, Droplet, Award, AlertTriangle, Trash2, Palette, Package, Layers, ShieldCheck } from "lucide-react";
 
 const sharedTechnicalSpecs = [
   { label: "HSN Code India-Specific", value: "10063020" },
   { label: "Purity", value: "95% to 99% min" },
 ];
-
-function getSpecIcon(label: string) {
-  const l = label.toLowerCase();
-  if (l.includes("source") || l.includes("state")) return <MapPin className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("length")) return <Ruler className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("moisture")) return <Droplet className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("broken")) return <Award className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("damaged") || l.includes("discolour")) return <AlertTriangle className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("foreign") || l.includes("matter")) return <Trash2 className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("colour") || l.includes("color")) return <Palette className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("packing") || l.includes("overseas")) return <Package className="h-4 w-4 text-[#a67c1c]" />;
-  if (l.includes("retail") || l.includes("package")) return <Layers className="h-4 w-4 text-[#a67c1c]" />;
-  return <ShieldCheck className="h-4 w-4 text-[#a67c1c]" />;
-}
 
 
 export function generateStaticParams() {
@@ -85,40 +70,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <SectionHeading title="Technical Purity & Standards" centered />
           <div className="mt-2 w-24 h-[2px] bg-[#a67c1c] mx-auto"></div>
         </div>
-        <div className="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {reorderedSpecs.map((spec, i) => {
-            return (
-              <ScrollReveal 
-                key={spec.label} 
-                direction="up" 
-                delay={i * 0.04}
-                className="col-span-1"
-              >
-                <BorderGlow
-                  className="min-h-[160px] p-4 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-lg cursor-pointer group h-full"
-                  backgroundColor="#1d2e11"
-                  borderRadius={18}
-                  glowColor="120 35% 19%"
-                  colors={['#1d2e11', '#244016', '#a67c1c']}
-                  fillOpacity={0.18}
-                >
-                  <div className="flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/8 border border-white/10 group-hover:bg-white/12 group-hover:border-white/20 transition-all duration-300">
-                      {getSpecIcon(spec.label)}
-                    </div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#cda110]/85 font-semibold font-sans">{spec.label}</span>
-                  </div>
-                  <div className="mt-3 flex-grow">
-                    <p className="font-serif-display text-base md:text-lg text-[#f7f3ec] font-medium leading-snug group-hover:text-[#cda110] transition-colors duration-300">
-                      {spec.value}
-                    </p>
-                  </div>
-                  <div className="mt-3 w-full h-[1px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#f7f3ec]/30 group-hover:via-[#cda110] group-hover:to-transparent transition-all duration-500 rounded" />
-                </BorderGlow>
-              </ScrollReveal>
-            );
-          })}
-        </div>
+        <TechnicalSpecs
+          productName={product.name}
+          category={product.category}
+          reorderedSpecs={reorderedSpecs}
+        />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">

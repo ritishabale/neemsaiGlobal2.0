@@ -32,6 +32,6 @@ export const testimonials = [
     name: "Vikram Singh",
     role: "Wholesale Importer, Chennai",
     stars: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=120",
   },
 ];

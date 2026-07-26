@@ -19,26 +19,26 @@ export default function TestimonialCard({
     <BorderGlow
       borderRadius={16}
       edgeSensitivity={30}
-      glowColor="135 48% 36%"
-      backgroundColor="#eef8ef"
+      glowColor="120 35% 19%"
+      backgroundColor="#1d2e11"
       glowRadius={30}
-      glowIntensity={0.6}
+      glowIntensity={0.5}
       coneSpread={20}
-      colors={["#1f5f3a", "#2b7a4b", "#4fa46d"]}
+      colors={["#2c3f16", "#1d2e11", "#a67c1c"]}
       className="min-w-[280px] md:min-w-[320px] max-w-sm h-full"
     >
-      <article className="p-6 flex flex-col justify-between h-full w-full bg-gradient-to-b from-[#f1fbf2] to-[#e7f6e9]">
+      <article className="p-6 flex flex-col justify-between h-full w-full bg-gradient-to-b from-[#2c3f16] to-[#1d2e11]">
         <div>
-          <p className="text-[#1f5f3a] italic text-sm md:text-base leading-relaxed">“{quote}”</p>
-          <div className="mt-4 flex gap-1 text-[#2f8c54]" aria-label={`${stars} stars`}>
+          <p className="text-[#fcf5e5] italic text-sm md:text-base leading-relaxed">“{quote}”</p>
+          <div className="mt-4 flex gap-1 text-[#cda110]" aria-label={`${stars} stars`}>
             {Array.from({ length: stars }).map((_, i) => (
               <Star key={i} className="h-4 w-4 fill-current" />
             ))}
           </div>
         </div>
         
-        <div className="mt-6 pt-4 border-t border-[#1f5f3a]/15 flex items-center gap-4">
-          <div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0 border border-[#1f5f3a]/20 bg-[#daf1df]">
+        <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-4">
+          <div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0 border border-white/15 bg-white/5">
             <Image
               src={image}
               alt={name}
@@ -47,8 +47,8 @@ export default function TestimonialCard({
             />
           </div>
           <div>
-            <p className="font-semibold text-[#1f5f3a] text-sm md:text-base leading-tight">{name}</p>
-            <p className="text-xs text-[#2b6b4a] mt-1">{role}</p>
+            <p className="font-semibold text-[#fcf5e5] text-sm md:text-base leading-tight">{name}</p>
+            <p className="text-xs text-[#98b5a3] mt-1">{role}</p>
           </div>
         </div>
       </article>

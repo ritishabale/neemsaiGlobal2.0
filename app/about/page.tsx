@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Plane, Package, ShieldCheck, Leaf, Handshake, Droplets, Globe, FileText, BadgeCheck, ScrollText, Stamp, IdCard, Award } from "lucide-react";
+import { CheckCircle2, Plane, Package, ShieldCheck, Leaf, Handshake, Droplets, Globe, Stamp, BadgeCheck, FileText, ScrollText, Award, IdCard } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal from "@/components/ScrollReveal";
 import ScrollFloat from "@/components/ScrollFloat";
@@ -48,20 +48,24 @@ export default function AboutPage() {
     return {
       title: cert.title,
       node: (
-        <div className="w-[320px] rounded-2xl border border-[#b7c6ad] bg-[#f3f8ef] px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7f976f] hover:shadow-md">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#7f976f]/20 bg-[#2c3f16]/10 text-[#2c3f16]">
+        <div className="group relative w-[320px] overflow-hidden rounded-2xl border border-[#b7c6ad]/50 bg-gradient-to-br from-white via-[#f3f8ef]/80 to-[#edf4e8]/30 px-5 py-4 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#7f976f]/60 hover:shadow-[0_12px_30px_rgba(44,63,22,0.12)]">
+          {/* Subtle animated brand green background radial on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,rgba(44,63,22,0.05)_0%,transparent_100%)] pointer-events-none" />
+          
+          {/* Animated brand green pulse dot */}
+          <div className="absolute top-4 right-4 flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7f976f] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2c3f16]"></span>
+          </div>
+          
+          <div className="flex items-center gap-4 relative z-10">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#7f976f] to-[#2c3f16] text-[#fcf5e5] shadow-md shadow-[#2c3f16]/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-[0_0_15px_rgba(44,63,22,0.35)]">
               <Icon className="h-6 w-6" />
             </div>
-            <div className="min-w-0">
-              <h3 className="truncate font-serif-display text-base text-[#2c3f16]">{cert.title}</h3>
-              <p className="mt-1 line-clamp-1 text-xs text-[#48624a] font-light">{cert.subtitle}</p>
+            <div className="min-w-0 pr-4">
+              <h3 className="truncate font-serif-display text-base text-[#2c3f16] font-semibold tracking-wide transition-colors duration-300 group-hover:text-[#2c3f16]">{cert.title}</h3>
+              <p className="mt-1 line-clamp-1 text-xs text-[#48624a] font-light transition-colors duration-300 group-hover:text-[#2c3f16]/80">{cert.subtitle}</p>
             </div>
-          </div>
-          <div className="mt-3 flex items-center justify-end">
-            <span className="inline-flex items-center rounded-full border border-[#2c3f16] bg-[#edf4e8] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-colors duration-300 group-hover:bg-[#2c3f16] group-hover:text-[#fcf5e5]">
-              View Document
-            </span>
           </div>
         </div>
       ),
@@ -91,10 +95,10 @@ export default function AboutPage() {
             From the sun-drenched fields of the Indo-Gangetic plains to the global dining tables, NeemSai Global represents a legacy of artisanal rice cultivation and uncompromising quality.
           </p>
         </div>
-        
+
         <div className="mt-12 w-full max-w-7xl h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-[#e2dbc9]/60 relative bg-[#f7f3ec]">
           <Image
-            src="/images/about-hero.png"
+            src="/images/aboutus_ricefield1.webp"
             alt="Rice paddies terraces sunrise"
             fill
             className="object-cover"
@@ -418,18 +422,18 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="rounded-3xl border border-[#b7c6ad]/80 bg-[#f3f8ef]/95 p-4 md:p-6 shadow-[0_18px_60px_rgba(44,63,22,0.08)] backdrop-blur-sm">
-            <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#b7c6ad]/70 pb-4">
+          <div className="rounded-3xl border border-[#b7c6ad]/60 bg-gradient-to-br from-[#f3f8ef]/95 via-[#edf4e8]/85 to-white/60 p-4 md:p-6 shadow-[0_20px_50px_rgba(44,63,22,0.06)] backdrop-blur-sm">
+            <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#b7c6ad]/40 pb-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[#a67c1c] font-semibold">Verified documents</p>
                 <h3 className="mt-2 font-serif-display text-2xl text-[#2c3f16]">Credentials we keep current.</h3>
               </div>
-              <span className="hidden rounded-full border border-[#2c3f16]/20 bg-[#dfead7] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#2c3f16] md:inline-flex">
+              <span className="hidden rounded-full border border-[#2c3f16]/20 bg-[#dfead7] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#2c3f16] animate-pulse md:inline-flex">
                 Hover to explore
               </span>
             </div>
 
-            <div className="h-[130px] md:h-[150px]">
+            <div className="h-[88px] md:h-[96px]">
               <LogoLoop
                 logos={certificationLoopItems}
                 speed={70}
@@ -442,35 +446,6 @@ export default function AboutPage() {
                 ariaLabel="NeemSai Global certifications"
               />
             </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {certifications.map((cert, index) => {
-              const Icon = cert.icon;
-              return (
-                <div
-                  key={cert.title}
-                  className="group rounded-2xl border border-[#b7c6ad]/80 bg-[#f7fbf4] p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#7f976f] hover:shadow-lg"
-                  style={{ animationDelay: `${index * 90}ms` }}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#7f976f]/20 bg-[#2c3f16]/10 text-[#2c3f16] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
-                      <Icon className="h-7 w-7" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="truncate font-serif-display text-lg text-[#2c3f16]">{cert.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed font-light text-[#48624a]">{cert.subtitle}</p>
-                    </div>
-                    <Link
-                      href="/contact"
-                      className="shrink-0 rounded-full border border-[#2c3f16] bg-[#edf4e8] px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#2c3f16] transition-all duration-300 hover:bg-[#2c3f16] hover:text-[#fcf5e5]"
-                    >
-                      View Document
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
