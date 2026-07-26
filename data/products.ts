@@ -128,8 +128,8 @@ export const products: Product[] = [
       { label: "Packing Retail", value: "1, 5 kg high-barrier laminated plastic pouches or stand-up zipper packs" },
     ],
     processingVariants: [
-      { name: "Raw", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=70&w=1200", description: "Uncooked aromatic grain sortex cleaned with classic taste profile." },
-      { name: "Sella", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=70&w=1200", description: "Premium parboiled style that ensures separate fluffy grains after cooking." },
+      { name: "Raw", image: "/images/1718-raw-basmati-rice.webp", description: "Uncooked aromatic grain sortex cleaned with classic taste profile." },
+      { name: "Sella", image: "/images/1718-Creamy-Sella-Basmati-Rice.jpg", description: "Premium parboiled style that ensures separate fluffy grains after cooking." },
     ],
     logistics: {
       moq: "2 x 20FT Container (2 FCL per day capacity)",
@@ -197,8 +197,8 @@ export const products: Product[] = [
       { label: "Packing Retail", value: "5, 10 kg premium BOPP or handles-equipped bags" },
     ],
     processingVariants: [
-      { name: "White Sella", image: "/images/sella-basmati-rice.jpeg", description: "Translucent cream color with low sticky properties." },
-      { name: "Golden Sella", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=70&w=1200", description: "Rich amber grain cured to expand cleanly on heating." },
+      { name: "Aged", image: "/images/Indian-Basmati-Rice-aged.jpg", description: "Translucent cream color with low sticky properties." },
+      { name: "Aromatic", image: "/images/basmati-rice-aromatic.webp", description: "Rich amber grain cured to expand cleanly on heating." },
     ],
     logistics: {
       moq: "2 x 20FT Container (2 FCL per day capacity)",
@@ -265,7 +265,7 @@ export const products: Product[] = [
       { label: "Packing Retail", value: "5, 10 kg BOPP bags" },
     ],
     processingVariants: [
-      { name: "Raw", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=70&w=1200", description: "Hygienically sorted broken raw Basmati grains." },
+      { name: "Raw", image: "/images/mini.jpeg", description: "Hygienically sorted broken raw Basmati grains." },
     ],
     logistics: {
       moq: "2 x 20FT Container (2 FCL per day capacity)",
