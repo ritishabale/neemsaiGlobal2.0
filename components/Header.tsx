@@ -26,11 +26,11 @@ export default function Header() {
         <div className="flex flex-1 justify-start">
           <Link href="/" className="flex items-center gap-2 font-serif-display text-2xl text-[#2c3f16]">
             <Image
-              src="/images/logo.png"
+              src="/images/NeemSai-Logo.png"
               alt="NeemSai Global Logo"
-              width={96}
+              width={220}
               height={96}
-              className="h-24 w-24 object-contain transition-all duration-300 hover:scale-105"
+              className="h-24 w-auto object-contain transition-all duration-300 hover:scale-105"
             />
             <span className="font-serif-display text-lg font-bold tracking-tight text-[#2c3f16] max-sm:hidden">
               NeemSai Global

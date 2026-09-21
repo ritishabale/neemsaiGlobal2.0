@@ -34,11 +34,11 @@ export default function Footer() {
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="/images/NeemSai-Logo.png"
               alt="NeemSai Global Logo"
-              width={40}
+              width={220}
               height={40}
-              className="h-10 w-10 object-contain brightness-0 invert transition-transform hover:scale-105 duration-300"
+              className="h-20 w-auto object-contain transition-transform hover:scale-105 duration-300"
             />
             <h3 className="font-serif-display text-3xl font-bold tracking-tight">NeemSai Global</h3>
           </div>

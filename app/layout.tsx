@@ -15,6 +15,11 @@ const bodoniModa = Bodoni_Moda({
 export const metadata: Metadata = {
   title: "NeemSai Global",
   description: "Premium basmati & non-basmati rice export company",
+  icons: {
+    icon: "/images/NeemSai-Logo.png",
+    shortcut: "/images/NeemSai-Logo.png",
+    apple: "/images/NeemSai-Logo.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
