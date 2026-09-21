@@ -57,7 +57,15 @@ export default function Header() {
         </nav>
 
         {/* Right: Desktop CTA */}
-        <div className="hidden md:flex flex-1 justify-end">
+        <div className="hidden md:flex flex-1 justify-end items-center gap-3">
+          <a
+            href="https://neemsai-global.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex rounded-full border border-[#2c3f16] px-4 py-2 font-serif-display text-sm font-semibold text-[#2c3f16] transition hover:bg-[#2c3f16]/10"
+          >
+            Visit Our Other Website
+          </a>
           <Link
             href="/contact"
             className="inline-flex rounded-full bg-[#2c3f16] px-4 py-2 font-serif-display text-sm font-semibold text-[#fcf5e5] transition hover:bg-[#2c3f16]"
@@ -76,6 +84,14 @@ export default function Header() {
       {/* Mobile Dropdown Menu */}
       {open && (
         <div className="absolute left-0 top-full w-full border-b border-[#d7d0c0] bg-[#f7f3ec] p-6 flex flex-col gap-4 md:hidden">
+          <a
+            href="https://neemsai-global.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-serif-display text-lg font-medium text-[#2c3f16]"
+          >
+            Visit Our Other Website
+          </a>
           {links.map((link) => {
             const active = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
             return (
