@@ -134,7 +134,7 @@ export default async function SpecSheetPage({ params }: { params: Promise<{ slug
       `}} />
 
       {/* Action Bar */}
-      <div className="no-print sticky top-0 z-50 w-full border-b border-[#b7c6ad]/40 bg-[#f3f8ef]/90 py-4 shadow-sm backdrop-blur-md">
+      <div className="no-print relative z-10 w-full border-b border-[#b7c6ad]/40 bg-[#f3f8ef]/90 py-4 shadow-sm backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6">
           <Link
             href={`/products/${product.slug}`}
