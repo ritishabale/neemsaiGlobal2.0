@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative mt-36 bg-[#2c3f16] text-[#f7f3ec] overflow-visible">
+    <footer className="site-footer relative mt-36 bg-[#2c3f16] text-[#f7f3ec] overflow-visible">
       {/* Detailed Logistics & Rice Grains Footer Divider */}
       <LogisticsFooterDivider />
 

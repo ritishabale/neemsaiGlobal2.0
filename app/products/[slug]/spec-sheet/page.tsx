@@ -80,27 +80,43 @@ export default async function SpecSheetPage({ params }: { params: Promise<{ slug
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf8f5] text-[#2c3f16] font-sans pb-12 antialiased">
+    <div className="spec-sheet-document min-h-screen bg-[#faf8f5] text-[#2c3f16] font-sans pb-12 antialiased">
       {/* Print styles */}
       <style dangerouslySetInnerHTML={{ __html: `
         @media print {
-          body {
+          @page {
+            size: A4;
+            margin: 0;
+          }
+          body:has(.spec-sheet-document) {
             background-color: white !important;
             color: black !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+          }
+          body:has(.spec-sheet-document) .site-header,
+          body:has(.spec-sheet-document) .site-footer,
+          body:has(.spec-sheet-document) .site-sticky-sidebar {
+            display: none !important;
           }
           .no-print {
             display: none !important;
           }
           .print-container {
             padding: 0 !important;
+            margin: 0 !important;
+            max-width: none !important;
             background-color: transparent !important;
             box-shadow: none !important;
           }
+          .print-container > .print-page {
+            margin-top: 0 !important;
+          }
           .print-page {
+            box-sizing: border-box !important;
             width: 210mm !important;
             height: 297mm !important;
+            min-height: 0 !important;
             margin: 0 !important;
             padding: 20mm !important;
             box-shadow: none !important;

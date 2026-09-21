@@ -5,7 +5,7 @@ import { Mail, Phone, Send } from "lucide-react";
 
 export default function StickySidebar() {
   return (
-    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-6 bg-[#2c3f16]/95 text-[#fcf5e5] py-6 px-3 rounded-full shadow-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_25px_rgba(44,63,22,0.3)]">
+    <div className="site-sticky-sidebar fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-6 bg-[#2c3f16]/95 text-[#fcf5e5] py-6 px-3 rounded-full shadow-2xl border border-white/10 backdrop-blur-md transition-all duration-300 hover:shadow-[0_0_25px_rgba(44,63,22,0.3)]">
       {/* WhatsApp Link */}
       <Link
         href="https://wa.me/919833613591"
