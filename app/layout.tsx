@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${bodoniModa.variable} h-full`}>
       <body className="min-h-full bg-[#f7f3ec] text-[#2c3f16]">
         <CustomCursor />
-        <StickySidebar />
+        {/* <StickySidebar /> */}
         <Header />
         <main>{children}</main>
         <Footer />

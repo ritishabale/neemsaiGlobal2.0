@@ -44,7 +44,7 @@ export default function ContactPage() {
     <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
       <SectionHeading title="A Legacy of Global Presence" subtitle="Our concierge export desk supports buyers across key markets." />
 
-      <section className="mt-10 grid gap-6 lg:grid-cols-2">
+      <section className="mt-10 grid gap-6 lg:grid-cols-1">
         <article className="rounded-2xl border border-[#e2dbc9] bg-white p-6 flex flex-col justify-between">
           <div>
             <h2 className="font-serif-display text-3xl text-[#2c3f16] font-bold">Global Presence</h2>
@@ -129,13 +129,13 @@ export default function ContactPage() {
           </div>
         </article>
 
-        <article className="rounded-2xl border border-[#e2dbc9] bg-white p-6">
+        {/* <article className="rounded-2xl border border-[#e2dbc9] bg-white p-6">
           <h2 className="font-serif-display text-3xl">Concierge Inquiry</h2>
           <p className="mt-2 text-[#48624a]">Share your procurement needs and our team will revert promptly.</p>
           <div className="mt-4">
             <InquiryForm type="full" />
           </div>
-        </article>
+        </article> */}
       </section>
 
       <section className="mt-8 grid gap-3 rounded-xl bg-[#f1eadf] p-5 text-[#2c3f16] sm:grid-cols-2">

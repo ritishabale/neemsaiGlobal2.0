@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Bottom Enquiry Form */}
-      <HomeEnquiryForm />
+      {/* <HomeEnquiryForm /> */}
     </div>
   );
 }
